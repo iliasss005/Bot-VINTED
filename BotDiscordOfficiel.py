@@ -7,8 +7,8 @@ class View(discord.ui.View):
         super().__init__()
         
         # Ajoutez un bouton avec l'URL
-        self.add_item(discord.ui.Button(label="🗒️Detail", style=discord.ButtonStyle.url, url=Url))
-        self.add_item(discord.ui.Button(label="🛒Acheter", style=discord.ButtonStyle.green, url=Url))
+        self.add_item(discord.ui.Button(label="🗒️Detalles", style=discord.ButtonStyle.url, url=Url))
+        self.add_item(discord.ui.Button(label="🛒Comprar", style=discord.ButtonStyle.green, url=Url))
 
         
 
@@ -58,7 +58,7 @@ async def send_message():
         button = discord.ui.Button(label="Clique")
         view.add_item(button)
         
-        await channel.send(f">>> [{Titre}]({image_url}) 💸Prix :\n {Prix}€ \n 📏Taille :\n {Taille} \n 👤Vendeur :\n {Seller} \n \n ", view=view)
+        await channel.send(f">>> [{Titre}]({image_url}) 💸Precio :\n {Prix}€ \n 📏Talla :\n {Taille} \n 👤Vendedor :\n {Seller} \n \n ", view=view)
         
 
 
